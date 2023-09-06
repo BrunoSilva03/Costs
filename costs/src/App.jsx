@@ -19,7 +19,7 @@ function App() {
         <Link to="/company">Empresa</Link>
         <Link to="/newproject">Novo Projeto</Link>
       </div>
-      <Container>
+      <Container customClass="min-height">
 
         <Routes>
 
@@ -36,6 +36,7 @@ function App() {
 
       </Container>
 
+      <p>Footer</p>
 
     </Router>
 
