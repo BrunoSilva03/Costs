@@ -3,6 +3,7 @@ import Home from './components/pages/Home'
 import Company from './components/pages/Company'
 import Contact from './components/pages/Contact'
 import NewProject from './components/pages/NewProject'
+import Projects from './components/pages/Projects'
 
 import Container from './components/layoult/Container'
 import styles from './components/layoult/Container.module.css'
@@ -23,6 +24,8 @@ function App() {
         <Routes>
 
           <Route exact path="/" element={<Home />}></Route>
+
+          <Route exact path="/projects" element={<Projects />}></Route>
 
           <Route exact path="/company" element={<Company />}></Route>
 
