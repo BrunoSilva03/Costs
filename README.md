@@ -1,3 +1,3 @@
 # Costs
 
-Projeto CRUD em React
+Projeto CRUD Completo em React
