@@ -19,7 +19,7 @@ function ProjectForm({btnText}) {
                 'Content-Type': 'application/json'
             }
         })
-            .ten((resp) => resp.json())
+            .then((resp) => resp.json())
             .then((data) => {
                 setCategories(data)
             })
