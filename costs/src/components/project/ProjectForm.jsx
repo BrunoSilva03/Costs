@@ -11,6 +11,7 @@ function ProjectForm({btnText}) {
 
         const [categories, setCategories] = useState([])
 
+      useEffect(() => {
         fetch("http://localhost:5000/categories", {
             method: "GET",
             headers: {
@@ -22,6 +23,7 @@ function ProjectForm({btnText}) {
                 setCategories(data)
             })
             .catch((err) => console.log(err))
+      }, [])
 
     return (
         <form className={styles.form}>
