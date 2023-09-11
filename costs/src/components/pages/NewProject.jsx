@@ -28,6 +28,7 @@ function NewProject() {
             console.log(data)
             //redirect
             navigate("/projects", {state: {message: "Projeto criado com Sucesso!!!"}})
+            
         })
         .catch((err) => console.log(err))
     }
