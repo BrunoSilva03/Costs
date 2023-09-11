@@ -37,6 +37,17 @@ function ProjectForm({ handleSubmit, btnText, projectData}) {
         console.log(project)
       }
 
+
+      function handleCategory(e) {
+        setProject({
+            ...project,
+            category: {
+                id: e.target.value,
+                name: e.target.options[e.target.selectedIndex].text,
+            },
+        })
+      }
+
     return (
         <form onSubmit={submit} className={styles.form}>
     
@@ -50,6 +61,8 @@ function ProjectForm({ handleSubmit, btnText, projectData}) {
             <Select name="category_id" 
             text="Selecione a categoria"
             options={categories}
+            handleOnChange={handleCategory}
+            value={project.category ? project.category.id : ''}
             />
            
             <SubmitButton text={btnText}/>
