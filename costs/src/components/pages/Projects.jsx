@@ -25,6 +25,11 @@ function Projects() {
                 'Content-Type': 'application/json',
             },
         })
+          .then((resp) => resp.json())
+          .then((data) => {
+            setProjects(data)
+          })
+          .catch((err) => console.log(err))
     }, [])
 
 
@@ -37,7 +42,8 @@ return (
         </div>
         {message && <Message type="sucess" msg={message}/>}
         <Container customClass="start">
-            <p>Projetos...</p>
+            {projects.length > 0 &&
+              projects.map((project) => <ProjectCard name={project.name} />)}
         </Container>
     </div>
 )
