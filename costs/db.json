@@ -23,39 +23,6 @@
       "id": 2
     },
     {
-      "name": "project",
-      "budget": "1",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "mais um teste",
-      "budget": "3",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "mais um vídeo",
-      "budget": "3",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
-    },
-    {
       "name": "agora deu certo!",
       "budget": "3000",
       "category": {
