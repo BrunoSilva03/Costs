@@ -16,16 +16,16 @@ function Project() {
     useEffect(() => {
         setTimeout(() => {
             fetch(`http://localhost:5000/projects/${id}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-          .then((resp) => resp.json())
-          .then((data) => {
-            setProject(data)
-          })
-          .catch((err) => console.log)
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+                .then((resp) => resp.json())
+                .then((data) => {
+                    setProject(data)
+                })
+                .catch((err) => console.log)
         }, 333)
     }, [id])
 
@@ -33,33 +33,41 @@ function Project() {
     function toggleProjectForm() {
         setShowProjectForm(!showProjectForm)
     }
-    
+
     return (
         <>
-        {project.name ? (
-            <div>
-                <Container customClass="column">
-                    <div>
-                        <h1>Projeto: {project.name}</h1>
-                        <button onClick={toggleProjectForm}>
-                            {!showProjectForm ? 'Editar projeto' : 'Fechar'}
+            {project.name ? (
+                <div className={styles.project_details}>
+                    <Container customClass="column">
+                        <div>
+                            <h1>Projeto: {project.name}</h1>
+                            <button className={styles.btn} onClick={toggleProjectForm}>
+                                {!showProjectForm ? 'Editar projeto' : 'Fechar'}
                             </button>
                             {!showProjectForm ? (
-                                <div>
-                                    <p>project form</p>
+                                <div className={styles.project_info}>
+                                    <p>
+                                        <span>Categoria:</span> {project.category.name}
+                                    </p>
+                                    <p>
+                                        <span>Total de Orçamento:</span> R${project.budget}
+                                    </p>
+                                    <p>
+                                        <span>Total Utilizado:</span> R${project.cost}
+                                    </p>
                                 </div>
                             ) : (
-                                <div>
-                                    <p>detalhes do projeto</p>
+                                <div className={styles.project_info}>
+                                    <p>form</p>
                                 </div>
                             )}
-                    </div>
-                </Container>
-            </div>
-            
-        ) : (
-            <Loading />
-        )}
+                        </div>
+                    </Container>
+                </div>
+
+            ) : (
+                <Loading />
+            )}
         </>
     )
 }
