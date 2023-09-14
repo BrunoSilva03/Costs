@@ -11,6 +11,7 @@ function Project() {
     const { id } = useParams()
 
     const [project, setProject] = useState([])
+    const [showProjectForm, setShowProjectForm] = useState(false)
 
     useEffect(() => {
         setTimeout(() => {
@@ -27,6 +28,11 @@ function Project() {
           .catch((err) => console.log)
         }, 333)
     }, [id])
+
+
+    function toggleProjectForm() {
+        setShowProjectForm(!showProjectForm)
+    }
     
     return (
         <>
@@ -35,7 +41,18 @@ function Project() {
                 <Container customClass="column">
                     <div>
                         <h1>Projeto: {project.name}</h1>
-                        <button>Editar projeto</button>
+                        <button onClick={toggleProjectForm}>
+                            {!showProjectForm ? 'Editar projeto' : 'Fechar'}
+                            </button>
+                            {!showProjectForm ? (
+                                <div>
+                                    <p>project form</p>
+                                </div>
+                            ) : (
+                                <div>
+                                    <p>detalhes do projeto</p>
+                                </div>
+                            )}
                     </div>
                 </Container>
             </div>
