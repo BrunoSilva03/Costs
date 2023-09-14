@@ -29,8 +29,27 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 633,
+      "services": [
+        {
+          "name": "Meu novo serviço",
+          "cost": "100",
+          "description": "serviço de teste de orçamento",
+          "id": "760a30dd-e789-4d91-8842-49c6ae67d11a"
+        },
+        {
+          "name": "Meu novo serviço",
+          "cost": "200",
+          "description": "serviço de teste de orçamento",
+          "id": "663570bd-0027-4b5a-911c-2cef179bf368"
+        },
+        {
+          "name": "Meu novo serviço",
+          "cost": "333",
+          "description": "serviço de teste de orçamento",
+          "id": "f1d9b778-3815-4a74-89d8-a07e3b3c49cf"
+        }
+      ],
       "id": 6
     }
   ],
