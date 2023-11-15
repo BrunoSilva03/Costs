@@ -1,0 +1,10 @@
+{ 
+  "scripts": {
+    "homepage": "https://BrunoSilva03.github.io/Costs",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+},
+  "dependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
